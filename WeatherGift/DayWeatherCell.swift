@@ -34,12 +34,9 @@ class DayWeatherCell: UITableViewCell {
         cellIcon.image = UIImage(named: dailyForecast.dailyIcon)
         let usableDate = Date(timeIntervalSince1970: dailyForecast.dailyDate)
         let dailyTimeZone = TimeZone(identifier: timeZone)
-    
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE"
         dateFormatter.timeZone = dailyTimeZone
-        
-        
         let weekDay = dateFormatter.string(from: usableDate)
         cellWeekDay.text = weekDay
     }
